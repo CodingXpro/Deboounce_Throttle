@@ -1,10 +1,6 @@
-// Debouncing and Throttling in javascript
-
 // Ques 1:- Create a button UI and add debounce as follows =>
 //         --> Show "Button Pressed <X> Times" every time button is pressed
-//         --> Increase "Triggered <Y> Times" count after 800ms of debounce
-
-// This is made by using lodash
+//         --> Increase "Triggered <Y> Times" count after 800ms of Throttle
 
 const btn = document.querySelector(".increment_btn");
 const btnPressed = document.querySelector(".increment_pressed");
@@ -21,9 +17,3 @@ btn.addEventListener("click", () => {
   btnPressed.innerHTML = ++pressedCount;
   debounceCount();
 });
-
-// Debouncing and Throttling in javascript
-
-// Ques 1:- Create a button UI and add debounce as follows =>
-//         --> Show "Button Pressed <X> Times" every time button is pressed
-//         --> Increase "Triggered <Y> Times" count after 800ms of Throttle
