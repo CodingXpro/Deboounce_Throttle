@@ -11,7 +11,21 @@ var triggeredCount = 0;
 
 const start = new Date().getTime();
 
-const throttleCount = _.throttle(() => {
+// Throttle Pollyfill
+
+const myThrottle = (cb, d) => {
+  let last = 0;
+  return (...args) => {
+    let now = new Date().getTime();
+    if (now - last < d) {
+      return;
+    }
+    last = now;
+    return cb(...args);
+  };
+};
+
+const throttleCount = myThrottle(() => {
   const now = new Date().getTime();
   console.log(now - start);
   count.innerHTML = ++triggeredCount;
