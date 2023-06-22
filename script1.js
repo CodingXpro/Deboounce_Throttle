@@ -9,11 +9,15 @@ const count = document.querySelector(".increment_count");
 var pressedCount = 0;
 var triggeredCount = 0;
 
-const debounceCount = _.debounce(() => {
+const start = new Date().getTime();
+
+const throttleCount = _.throttle(() => {
+  const now = new Date().getTime();
+  console.log(now - start);
   count.innerHTML = ++triggeredCount;
 }, 2000);
 
 btn.addEventListener("click", () => {
   btnPressed.innerHTML = ++pressedCount;
-  debounceCount();
+  throttleCount();
 });

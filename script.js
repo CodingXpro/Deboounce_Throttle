@@ -6,21 +6,21 @@
 
 // This is made by using lodash
 
-const btn = document.querySelector(".increment_btn");
-const btnPressed = document.querySelector(".increment_pressed");
-const count = document.querySelector(".increment_count");
+// const btn = document.querySelector(".increment_btn");
+// const btnPressed = document.querySelector(".increment_pressed");
+// const count = document.querySelector(".increment_count");
 
-var pressedCount = 0;
-var triggeredCount = 0;
+// var pressedCount = 0;
+// var triggeredCount = 0;
 
-const debounceCount = _.debounce(() => {
-  count.innerHTML = ++triggeredCount;
-}, 2000);
+// const debounceCount = _.debounce(() => {
+//   count.innerHTML = ++triggeredCount;
+// }, 2000);
 
-btn.addEventListener("click", () => {
-  btnPressed.innerHTML = ++pressedCount;
-  debounceCount();
-});
+// btn.addEventListener("click", () => {
+//   btnPressed.innerHTML = ++pressedCount;
+//   debounceCount();
+// });
 
 // Debouncing and Throttling in javascript
 
