@@ -13,6 +13,7 @@ const count = document.querySelector(".increment_count");
 var pressedCount = 0;
 var triggeredCount = 0;
 
+// Debounce Pollyfill()
 const myDebounce = (cb, d) => {
   let timer;
   return function (...args) {
